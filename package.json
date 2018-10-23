@@ -11,14 +11,6 @@
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.24.3",
-        "gulp": "latest",
-        "gulp-coffee": "latest",
-        "gulp-concat": "latest",
-        "gulp-connect": "latest",
-        "gulp-install": "^1.1.0",
-        "gulp-sass": "latest",
-        "gulp-uglify": "latest",
-        "gulp-util": "latest"
+      
     }
 }
