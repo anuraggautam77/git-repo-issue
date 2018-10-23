@@ -1,0 +1,42 @@
+header {
+  padding: 80px 0 25px
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 80px 0 25px
+  }
+}
+
+ 
+.form-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.row {
+  justify-content: center;
+}
+ 
+#createIssue .form-group {
+  justify-content: center;
+}
+
+.form-group .error, .form-group .terror {
+  color: red;
+}
+
+#createIssue .success {
+  color: green;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.input-container {
+  padding: 0;
+}
+
+ .odd{
+   background-color: #96939354 !important;
+ }
