@@ -1,6 +1,6 @@
 
 // Global variable
-API_ENDPOINT = 'https://api.github.com/';
+GITHUB_API_ENDPOINT = 'https://api.github.com/';
 
 $(document).ready(function () {
   localStorage.removeItem('repo');
@@ -43,7 +43,7 @@ function createToken(username, password, search) {
   var s = username + ':' + password;
   var tokenName = Math.random().toString(36).substring(2, 15);
   $.ajax({
-    url: API_ENDPOINT + 'authorizations',
+    url: GITHUB_API_ENDPOINT + 'authorizations',
     type: 'POST',
     beforeSend: function (xhr) {
       xhr.setRequestHeader("Authorization", "Basic " + btoa(s));
@@ -62,7 +62,7 @@ function createToken(username, password, search) {
 
 function getUserRepo(search) {
   $.ajax({
-    url: API_ENDPOINT + 'users/' + search + '/repos',
+    url: GITHUB_API_ENDPOINT + 'users/' + search + '/repos',
     headers: {
       'Authorization': localStorage.getItem('access_token')
     },
@@ -101,7 +101,7 @@ function createIssue() {
 
   $.ajax({
     type: 'POST',
-    url: API_ENDPOINT + 'repos/' + username + '/' + repoName + '/issues',
+    url: GITHUB_API_ENDPOINT + 'repos/' + username + '/' + repoName + '/issues',
     headers: {
       'Authorization': localStorage.getItem('access_token')
     },
