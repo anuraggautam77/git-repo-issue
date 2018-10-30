@@ -1,15 +1,15 @@
 
 // Global variable
-GITHUB_API_ENDPOINT = 'https://api.github.com/';
+ const GITHUB_API_ENDPOINT = 'https://api.github.com/';
 
-$(document).ready(function () {
+$(document).ready( ()=> {
   localStorage.removeItem('repo');
   localStorage.removeItem('username');
   localStorage.removeItem('access_token');
 });
 
 // Handle calls to Github
-$('#getUser').click(function () {
+$('#getUser').click(()=> {
   var username = $('#username').val();
   var password = $('#password').val();
   var search = ($('#gitusername').val()) ? $('#gitusername').val() : username;
@@ -28,7 +28,7 @@ $('#getUser').click(function () {
   }
 });
 
-$('#createIssueButton').click(function () {
+$('#createIssueButton').click(()=> {
   var title = $('#title').val();
   if (title) {
     $('.terror').removeClass('d-block').addClass('d-none').html('');
@@ -124,7 +124,7 @@ function createIssue() {
 
 function listRepo(response) {
 
-console.log(response)
+ 
 
   var table = $('#userRepoList').DataTable({
     data: response,
